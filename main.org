@@ -1,0 +1,15 @@
+* Org-Mode
+** Compose [0/3]
+   * [ ] outlines
+   * [ ] todo lists
+   * [ ] babel (code within org-mode, make sure we mention dot!)
+   * [ ] Snippets (Emacs Specific?)
+** Render [0%]
+   * [ ] The very presentation we're seeing
+   * [ ] GitHub accepts it
+   * [ ] Blog system
+** Versions of org-mode outside Emacs
+   * [ ] Pandoc
+   * [ ] Vim
+   * [ ] Sublime (https://packagecontrol.io/packages/orgmode)
+   * [ ] Emacs without Emacs
