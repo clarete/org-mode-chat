@@ -1,5 +1,5 @@
 * Org-Mode
-** Compose [0/3]
+** Compose [0/4]
    * [ ] outlines
    * [ ] todo lists
    * [ ] babel (code within org-mode, make sure we mention dot!)
@@ -7,9 +7,19 @@
 ** Render [0%]
    * [ ] The very presentation we're seeing
    * [ ] GitHub accepts it
+   * [ ] [[https://github.com/yjwen/org-reveal][Org-Reveal]]
    * [ ] Blog system
 ** Versions of org-mode outside Emacs
    * [ ] Pandoc
-   * [ ] Vim
-   * [ ] Sublime (https://packagecontrol.io/packages/orgmode)
+   * [ ] [[https://github.com/jceb/vim-orgmode][Vim]]
+   * [ ] [[https://packagecontrol.io/packages/orgmode][Sublime]]
+   * [ ] [[https://github.com/vscode-org-mode/vscode-org-mode][VS Code]]
    * [ ] Emacs without Emacs
+     #+begin_src makefile
+     EMACS    ?= $(shell which emacs)
+     TARGET   := index.pdf
+     pdf: $(TARGET)
+     clean:; -rm $(TARGET) index.tex index.html *~
+     %.pdf: %.org; $(EMACS) $< -Q --batch --eval '(org-latex-export-to-pdf)'
+     .PHONY: pdf clean
+     #+end_src
