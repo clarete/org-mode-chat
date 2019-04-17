@@ -1,8 +1,93 @@
-* Org-Mode
-** Compose [0/4]
-   * [ ] outlines
-   * [ ] todo lists
+#+TITLE: Org-Mode
+#+OPTIONS: toc:1 num:nil
+#+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+REVEAL_THEME: night
+#+REVEAL_TRANS: linear
+
+# M-x load-library<ret>ox-reveal
+# Execute 'C-c C-e R R' to export the presentation
+
+* What does it do
+  * Note Taking
+  * TODO Lists
+  * Authoring Documents
+  * Project Planning
+* Composing
+** Similar to Markdown
+   #+begin_src text
+   * This Is A Heading
+   ** This Is A Sub-Heading
+   *** And A Sub-Sub-Heading
+
+   Paragraphs are separated by at least one empty line.
+
+   *bold* /italic/ _underlined_ +strikethrough+ =monospaced=
+   [[http://orgmode.org][Link description]]
+   http://orgmode.org → link without description
+
+   - list item
+   - another item
+     - sub-item
+       1. also enumerated
+       2. if you like
+   - [X] item marked as done
+   - [ ] item marked as undone
+   #+end_src
+** Outlines
+   * Structure thoughts as trees
+   * Improve navigation, control over visibility & focus
+** Literate Programming
+
+   The babel plugin allows org-mode to execute code snippets, like
+   *Jupyter* notebooks. But it accepts different languages, unlike any
+   other.
+
+   #+begin_src ditaa :file blue.png :cmdline -r
+   +---------+
+   | cGRE    |
+   |         |
+   |    +----+
+   |    |cBLU|
+   |    |    |
+   +----+----+
+   #+end_src
+
+   #+RESULTS:
+   [[file:blue.png]]
+
+** TODO Lists
+*** Outlines starting with ~TODO~ become entries
+    #+CAPTION: Outlines marked with TODO keywords
+    #+NAME:    fig:org-mode-tasks.jpg
+    #+attr_html: :width 55%
+    [[./org-mode-tasks.jpg]]
+
+*** View all TODOs in a central location
+    #+CAPTION: Org-Agenda with items from multiple files
+    #+NAME:    fig:org-mode-agenda.jpg
+    #+attr_html: :width 55%
+    [[./org-mode-agenda.jpg]]
+*** Other Interesting Features
+    * Prioritization
+    * Tagging
+    * More Visualizations
+*** Customize it to your flow
+    #+begin_src lisp
+    (setq org-todo-keywords
+       '((sequence "TODO" "DOING" "BLOCKED" "|" "DONE" "ARCHIVED")))
+    (setq org-todo-keyword-faces
+       '(("TODO" . "red")
+         ("DOING" . "yellow")
+         ("BLOCKED" . org-warning)
+         ("DONE" . "green")
+         ("ARCHIVED" .  "blue")))
+    #+end_src
+* Draft Notes
+** Compose [2/4]
+   * [X] outlines
+   * [X] todo lists
    * [ ] babel (code within org-mode, make sure we mention dot!)
+     http://cachestocaches.com/2018/6/org-literate-programming/
    * [ ] Snippets (Emacs Specific?)
 ** Render [0%]
    * [ ] The very presentation we're seeing
