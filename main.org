@@ -43,30 +43,42 @@
    *Jupyter* notebooks. But it accepts different languages, unlike any
    other.
 
-   #+begin_src ditaa :file blue.png :cmdline -r
-   +---------+
-   | cGRE    |
-   |         |
-   |    +----+
-   |    |cBLU|
-   |    |    |
-   +----+----+
-   #+end_src
+*** ditaa
 
-   #+RESULTS:
-   [[file:blue.png]]
+    #+begin_src ditaa :file blue.png :cmdline -r
+    +---------+
+    | cGRE    |
+    |         |
+    |    +----+
+    |    |cBLU|
+    |    |    |
+    +----+----+
+    #+end_src
+
+    #+RESULTS:
+    [[file:blue.png]]
+
+*** Python
+
+    #+BEGIN_SRC python :results output
+    import random
+    print("Hello Random Stuff: %f" % random.random())
+    #+END_SRC
+
+    #+RESULTS:
+    : Hello Random Stuff: 0.969631
 
 ** TODO Lists
 *** Outlines starting with ~TODO~ become entries
     #+CAPTION: Outlines marked with TODO keywords
     #+NAME:    fig:org-mode-tasks.jpg
-    #+attr_html: :width 55%
+    #+attr_html: :width 75%
     [[./org-mode-tasks.jpg]]
 
 *** View all TODOs in a central location
     #+CAPTION: Org-Agenda with items from multiple files
     #+NAME:    fig:org-mode-agenda.jpg
-    #+attr_html: :width 55%
+    #+attr_html: :width 57%
     [[./org-mode-agenda.jpg]]
 *** Other Interesting Features
     * Prioritization
