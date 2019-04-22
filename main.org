@@ -15,9 +15,9 @@
 * Composing
 ** Similar to Markdown
    #+begin_src text
-   * This Is A Heading
-   ** This Is A Sub-Heading
-   *** And A Sub-Sub-Heading
+   * Heading
+   ** Sub-Heading
+   *** Sub-Sub-Heading
 
    Paragraphs are separated by at least one empty line.
 
