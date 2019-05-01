@@ -1,5 +1,6 @@
-#+TITLE: Org-Mode
-#+OPTIONS: toc:1 num:nil
+#+TITLE: Org-Mode: so much pretty, no much work
+#+AUTHOR: Lincoln & Brendan
+#+OPTIONS: toc:nil num:nil created:nil date:nil
 #+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
 #+REVEAL_THEME: night
 #+REVEAL_TRANS: linear
@@ -7,130 +8,127 @@
 # M-x load-library<ret>ox-reveal
 # Execute 'C-c C-e R R' to export the presentation
 
-* What does it do
-  * Note Taking
-  * TODO Lists
-  * Authoring Documents
-  * Project Planning
-* Composing
+* So Much Pretty
+** Slide for the PDF
+** Slide for the Blog Screenshot
+** Slide for the presentation Screenshot
+* No Much Work
 ** Similar to Markdown
-   #+begin_src text
-   * Heading
-   ** Sub-Heading
-   *** Sub-Sub-Heading
-
-   Paragraphs are separated by at least one empty line.
-
-   *bold* /italic/ _underlined_ +strikethrough+ =monospaced=
-   [[http://orgmode.org][Link description]]
-   http://orgmode.org → link without description
-
-   - list item
-   - another item
-     - sub-item
-       1. also enumerated
-       2. if you like
-   - [X] item marked as done
-   - [-] item marked as doing I guess
-   - [ ] item marked as undone
-   #+end_src
-** Outlines
-   * Structure thoughts as trees
-   * Improve navigation, control over visibility & focus
-** Tables
-
-   #+begin_src text
-   | Col1  | Col2  |
-   |-------+-------|
-   | Cell1 | Cell2 |
-   | Cell3 | Cell4 |
-   #+end_src
-
-   | Col1  | Col2  |
-   |-------+-------|
-   | Cell1 | Cell2 |
-   | Cell3 | Cell4 |
-** Literate Programming
-
-   The babel plugin allows org-mode to execute code snippets, like
-   *Jupyter* notebooks. But it accepts different languages, unlike any
-   other.
-
-*** ditaa
-
-    #+begin_src ditaa :file blue.png :cmdline -r
-    +---------+
-    | cGRE    |
-    |         |
-    |    +----+
-    |    |cBLU|
-    |    |    |
-    +----+----+
+*** Titles & Paragraphs
+    #+begin_src text
+    * Heading
+    ** Sub-Heading
+    *** Sub-Sub-Heading
     #+end_src
 
-    #+RESULTS:
-    [[file:blue.png]]
+    <Image of some paragraphs with rendered>
+*** Basic Formatting
+    * Bold
+    * Italic
+    * Underline
+    * Strike through
+*** Lists
+*** And all the other goods
+    * Images
+    * Tables
+    * Your favorite Markdown feature...
+** Rendering Your Work
+*** Good rendering defaults (80 to 20 rule)
+    * Render some content without any options
+    * Talk about options and render another PDF with options
+      * ~#+OPTIONS: toc:nil num:nil created:nil date:nil~
+    * Generate PDF (native from Latex)
+      * More options for the latex backend
+    * Generate Jekyll (org2jekyll)
+      * Some options used for rendering the blog
 
-*** Python
+* Editor Specific
+** 
 
-    #+BEGIN_SRC python :results output
-    import random
-    print("Hello Random Stuff: %f" % random.random())
-    #+END_SRC
+ # ** Outlines
+ #    * Structure thoughts as trees
+ #    * Improve navigation, control over visibility & focus
+ # ** Literate Programming
 
-    #+RESULTS:
-    : Hello Random Stuff: 0.969631
+ #    The babel plugin allows org-mode to execute code snippets, like
+ #    *Jupyter* notebooks. But it accepts different languages, unlike any
+ #    other.
 
-** TODO Lists
-*** Outlines starting with ~TODO~ become entries
-    #+CAPTION: Outlines marked with TODO keywords
-    #+NAME:    fig:org-mode-tasks.jpg
-    #+attr_html: :width 75%
-    [[./org-mode-tasks.jpg]]
+ # *** ditaa
 
-*** View all TODOs in a central location
-    #+CAPTION: Org-Agenda with items from multiple files
-    #+NAME:    fig:org-mode-agenda.jpg
-    #+attr_html: :width 57%
-    [[./org-mode-agenda.jpg]]
-*** Other Interesting Features
-    * Prioritization
-    * Tagging
-    * More Visualizations
-*** Customize it to your flow
-    #+begin_src lisp
-    (setq org-todo-keywords
-       '((sequence "TODO" "DOING" "BLOCKED" "|" "DONE" "ARCHIVED")))
-    (setq org-todo-keyword-faces
-       '(("TODO" . "red")
-         ("DOING" . "yellow")
-         ("BLOCKED" . org-warning)
-         ("DONE" . "green")
-         ("ARCHIVED" .  "blue")))
-    #+end_src
-* Draft Notes
-** Compose [2/4]
-   * [X] outlines
-   * [X] todo lists
-   * [ ] babel (code within org-mode, make sure we mention dot!)
-     http://cachestocaches.com/2018/6/org-literate-programming/
-   * [ ] Snippets (Emacs Specific?)
-** Render [0%]
-   * [ ] The very presentation we're seeing
-   * [ ] GitHub accepts it
-   * [ ] [[https://github.com/yjwen/org-reveal][Org-Reveal]]
-   * [ ] Blog system
-** Versions of org-mode outside Emacs
-   * [ ] Pandoc
-   * [ ] [[https://github.com/jceb/vim-orgmode][Vim]]
-   * [ ] [[https://packagecontrol.io/packages/orgmode][Sublime]]
-   * [ ] [[https://github.com/vscode-org-mode/vscode-org-mode][VS Code]]
-   * [ ] Emacs without Emacs
-     #+begin_src makefile
-     EMACS    ?= $(shell which emacs)
-     TARGET   := index.pdf
-     pdf: $(TARGET)
-     clean:; -rm $(TARGET) index.tex index.html *~
-     %.pdf: %.org; $(EMACS) $< -Q --batch --eval '(org-latex-export-to-pdf)'
-     .PHONY: pdf clean
-     #+end_src
+ #     # #+begin_src ditaa :file blue.png :cmdline -r
+ #     # +---------+
+ #     # | cGRE    |
+ #     # |         |
+ #     # |    +----+
+ #     # |    |cBLU|
+ #     # |    |    |
+ #     # +----+----+
+ #     # #+end_src
+
+ #     # #+RESULTS:
+ #     # [[file:blue.png]]
+
+ # *** Python
+
+ #     #+BEGIN_SRC python :results output
+ #     import random
+ #     print("Hello Random Stuff: %f" % random.random())
+ #     #+END_SRC
+
+ #     #+RESULTS:
+ #     : Hello Random Stuff: 0.969631
+
+ # ** TODO Lists
+ # *** Outlines starting with ~TODO~ become entries
+ #     #+CAPTION: Outlines marked with TODO keywords
+ #     #+NAME:    fig:org-mode-tasks.jpg
+ #     #+attr_html: :width 75%
+ #     [[./org-mode-tasks.jpg]]
+
+ # *** View all TODOs in a central location
+ #     #+CAPTION: Org-Agenda with items from multiple files
+ #     #+NAME:    fig:org-mode-agenda.jpg
+ #     #+attr_html: :width 57%
+ #     [[./org-mode-agenda.jpg]]
+ # *** Other Interesting Features
+ #     * Prioritization
+ #     * Tagging
+ #     * More Visualizations
+ # *** Customize it to your flow
+ #     #+begin_src lisp
+ #     (setq org-todo-keywords
+ #        '((sequence "TODO" "DOING" "BLOCKED" "|" "DONE" "ARCHIVED")))
+ #     (setq org-todo-keyword-faces
+ #        '(("TODO" . "red")
+ #          ("DOING" . "yellow")
+ #          ("BLOCKED" . org-warning)
+ #          ("DONE" . "green")
+ #          ("ARCHIVED" .  "blue")))
+ #     #+end_src
+ # * Draft Notes
+ # ** Compose [2/4]
+ #    * [X] outlines
+ #    * [X] todo lists
+ #    * [ ] babel (code within org-mode, make sure we mention dot!)
+ #      http://cachestocaches.com/2018/6/org-literate-programming/
+ #    * [ ] Snippets (Emacs Specific?)
+ # ** Render [0%]
+ #    * [ ] The very presentation we're seeing
+ #    * [ ] GitHub accepts it
+ #    * [ ] [[https://github.com/yjwen/org-reveal][Org-Reveal]]
+ #    * [ ] Blog system
+ # ** Versions of org-mode outside Emacs
+ #    * [ ] Pandoc
+ #    * [ ] [[https://github.com/jceb/vim-orgmode][Vim]]
+ #    * [ ] [[https://packagecontrol.io/packages/orgmode][Sublime]]
+ #    * [ ] [[https://github.com/vscode-org-mode/vscode-org-mode][VS Code]]
+ #    * [ ] Emacs without Emacs
+ #      #+begin_src makefile
+ #      EMACS    ?= $(shell which emacs)
+ #      TARGET   := index.pdf
+ #      pdf: $(TARGET)
+ #      clean:; -rm $(TARGET) index.tex index.html *~
+ #      %.pdf: %.org; $(EMACS) $< -Q --batch --eval '(org-latex-export-to-pdf)'
+ #      .PHONY: pdf clean
+ #      #+end_src
