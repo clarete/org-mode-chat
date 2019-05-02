@@ -10,7 +10,9 @@
 
 * So Much Pretty
 ** Slide for the PDF
+   file:assets/pdf.png
 ** Slide for the Blog Screenshot
+   file:assets/blog.png
 ** Slide for the presentation Screenshot
 * No Much Work
 ** Similar to Markdown
@@ -47,8 +49,9 @@
     * Generate Jekyll (org2jekyll)
       * Some options used for rendering the blog
 
-* Editor Specific
-  <Lincoln goes nuts and wows everyone with his org mode skillz with a z>
+* Editor Specific/Live demo
+  * Dynamic document editing
+  * Babel
 ** 
 
  # ** Outlines
