@@ -19,21 +19,26 @@
     * Heading
     ** Sub-Heading
     *** Sub-Sub-Heading
+	
+	- List item 1
+	- List item 2
+	- List item 3
     #+end_src
 
-    <Image of some paragraphs with rendered>
+    file:assets/headers-and-lists.png
 *** Basic Formatting
-    * Bold
-    * Italic
-    * Underline
-    * Strike through
-*** Lists
+	#+begin_src text
+	*Bold*
+	/italic/
+	_underlined_
+	#+end_src
+	file:assets/typography.png
 *** And all the other goods
     * Images
     * Tables
     * Your favorite Markdown feature...
 ** Rendering Your Work
-*** Good rendering defaults (80 to 20 rule)
+*** Good rendering defaults (80/20 rule)
     * Render some content without any options
     * Talk about options and render another PDF with options
       * ~#+OPTIONS: toc:nil num:nil created:nil date:nil~
@@ -43,6 +48,7 @@
       * Some options used for rendering the blog
 
 * Editor Specific
+  <Lincoln goes nuts and wows everyone with his org mode skillz with a z>
 ** 
 
  # ** Outlines
