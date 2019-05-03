@@ -151,3 +151,8 @@
    * Agenda Consolidation
    * Dynamic Tables (Yeah, spreadsheets)
    * Literate Programming (Like Jupyter)
+* Questions?
+* Thanks
+
+  #+attr_html: :width 50%
+  file:assets/Emacs.png
