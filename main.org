@@ -33,7 +33,15 @@
    #+NAME: fig:latex.svg
    #+attr_html: :class logo jekyll-logo
    file:assets/jekyll.png
-** Slide for the presentation Screenshot
+** Recurse you!
+   #+CAPTION: Reveal
+   #+NAME: Reveal JS
+   file:assets/rec.png
+
+   #+NAME: fig:js.png
+   #+attr_html: :class logo js-logo
+   file:assets/js.png
+
 * No Much Work
 ** Similar to Markdown
 *** Titles & Paragraphs

@@ -46,6 +46,12 @@ ul.title li:first-child {
     left: 71%;
 }
 
+.reveal section img.js-logo {
+    width: 20%;
+    top: 8%;
+    left: 80%;
+}
+
 .reveal section img.headers-and-lists {
     background-color: #fff;
     padding: 0 210px;
