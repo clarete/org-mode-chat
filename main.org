@@ -4,15 +4,30 @@
 #+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
 #+REVEAL_THEME: night
 #+REVEAL_TRANS: linear
+#+REVEAL_EXTRA_CSS: ./main.css
 
 # M-x load-library<ret>ox-reveal
 # Execute 'C-c C-e R R' to export the presentation
 
 * So Much Pretty
-** Slide for the PDF
-   file:assets/pdf.png
-** Slide for the Blog Screenshot
-   file:assets/blog.png
+** Generate beautiful PDF files
+
+   #+CAPTION: LaTeX
+   #+NAME: PDF
+   file:assets/pdf2.png
+
+   #+NAME: fig:latex.svg
+   #+attr_html: :class logo latex-logo
+   file:assets/latex.png
+
+** Write Blog Posts
+   #+CAPTION: Jekyll
+   #+NAME: Blog
+   file:assets/blog2.png
+
+   #+NAME: fig:latex.svg
+   #+attr_html: :class logo jekyll-logo
+   file:assets/jekyll.png
 ** Slide for the presentation Screenshot
 * No Much Work
 ** Similar to Markdown
