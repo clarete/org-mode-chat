@@ -42,6 +42,7 @@
 	- List item 3
     #+end_src
 
+    #+attr_html: :class headers-and-lists
     file:assets/headers-and-lists.png
 *** Basic Formatting
 	#+begin_src text
@@ -49,11 +50,18 @@
 	/italic/
 	_underlined_
 	#+end_src
+        #+attr_html: :class typography
 	file:assets/typography.png
+*** Tables
+	#+begin_src text
+        I owe you a table slide (And a table image)
+	#+end_src
+        #+attr_html: :class tables
+	file:assets/tables.png
+
 *** And all the other goods
     * Images
-    * Tables
-    * Your favorite Markdown feature...
+    * Your favorite Markdown feature..
 ** Rendering Your Work
 *** Good rendering defaults (80/20 rule)
     * Render some content without any options

@@ -1,3 +1,7 @@
+.reveal pre.src-text {
+    padding: 30px;
+}
+
 .reveal section img {
     background: transparent;
     border: none;
@@ -21,4 +25,13 @@
     width: 27%;
     top: 8%;
     left: 71%;
+}
+
+.reveal section img.headers-and-lists {
+    background-color: #fff;
+    padding: 0 210px;
+}
+.reveal section img.typography {
+    background-color: #fff;
+    padding: 0 310px;
 }
