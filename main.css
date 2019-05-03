@@ -1,5 +1,24 @@
+/* Hide date */
+#sec-title-slide .date { display: none; }
+#sec-title-slide h1 { text-align: left; }
+
+/* Padding for source text */
 .reveal pre.src-text {
     padding: 30px;
+}
+
+section.stack.present:first-child section.present:first-child {
+    background:url(./assets/Org-mode-unicorn.svg) no-repeat 0px center;
+}
+
+ul.title {
+    list-style: none;
+    font-size: 80px;
+    font-weight: 600;
+}
+
+ul.title li:first-child {
+    color: #e7ad52;
 }
 
 .reveal section img {

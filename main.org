@@ -1,6 +1,6 @@
 #+TITLE: Org-Mode: so much pretty, no much work
 #+AUTHOR: Lincoln & Brendan
-#+OPTIONS: toc:nil num:nil created:nil date:nil
+#+OPTIONS: toc:nil num:nil reveal_title_slide:nil reveal_history:t
 #+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
 #+REVEAL_THEME: night
 #+REVEAL_TRANS: linear
@@ -9,6 +9,11 @@
 # M-x load-library<ret>ox-reveal
 # Execute 'C-c C-e R R' to export the presentation
 
+* 
+  #+attr_html: :class title
+  * org-mode
+  * so much pretty,
+  * no much work
 * So Much Pretty
 ** Generate beautiful PDF files
 
