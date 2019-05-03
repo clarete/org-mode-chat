@@ -11,7 +11,7 @@
 
 * 
   #+attr_html: :class title
-  * org-mode
+  * org-mode:
   * so much pretty,
   * no much work
 * So Much Pretty
@@ -67,113 +67,86 @@
 	file:assets/typography.png
 *** Tables
 	#+begin_src text
-        I owe you a table slide (And a table image)
+        | Job         | Tool       |
+        |-------------+------------|
+        | Front-end   | JavaScript |
+        | Backend     | Python     |
+        | Data Access | SQL        |
 	#+end_src
         #+attr_html: :class tables
 	file:assets/tables.png
 
-*** And all the other goods
-    * Images
-    * Your favorite Markdown feature..
+** But Much More
+*** Include External Files
+    #+begin_src text
+    file:assets/tables.png
+    #+end_src
+*** Babel
+**** ditaa
+
+     #+begin_src ditaa :file blue.png :cmdline -r
+     +---------+
+     | cGRE    |
+     |         |
+     |    +----+
+     |    |cBLU|
+     |    |    |
+     +----+----+
+     #+end_src
+
+     #+RESULTS:
+     [[file:blue.png]]
+
+**** Python
+
+     #+BEGIN_SRC python :results output
+     import random
+     print("Hello Random Stuff: %f" % random.random())
+     #+END_SRC
+
+     #+RESULTS:
+     : Hello Random Stuff: 0.684295
+
 ** Rendering Your Work
 *** Good rendering defaults (80/20 rule)
-    * Render some content without any options
-    * Talk about options and render another PDF with options
-      * ~#+OPTIONS: toc:nil num:nil created:nil date:nil~
-    * Generate PDF (native from Latex)
-      * More options for the latex backend
-    * Generate Jekyll (org2jekyll)
-      * Some options used for rendering the blog
+*** Header of an actual LaTeX Article
+    #+begin_src text
+    #+STARTUP: showall
+    #+STARTUP: hidestars
+    #+OPTIONS: H:2 num:nil tags:nil toc:nil timestamps:t
+    #+LAYOUT: post
+    #+AUTHOR: Brendan Good
+    #+DATE: 2018-04-11 Wed 19:44
+    #+TITLE: Understanding Natural Transformations
+    #+DESCRIPTION: Natural transformations are critical in understanding
+     category theory, here I'll explain them as I understand them
+    #+TAGS: category theory,natural transformations
+    #+CATEGORIES: math,category theory
+    #+LATEX_HEADER: \usepackage{amsfonts}
+    #+LATEX_HEADER: \usepackage{amssymb}
+    #+LATEX_HEADER: \usepackage{amsmath}
+    #+LATEX_HEADER: \usepackage{amscd}
+    #+end_src
 
-* Editor Specific/Live demo
-  * Dynamic document editing
-  * Babel
-** 
-
- # ** Outlines
- #    * Structure thoughts as trees
- #    * Improve navigation, control over visibility & focus
- # ** Literate Programming
-
- #    The babel plugin allows org-mode to execute code snippets, like
- #    *Jupyter* notebooks. But it accepts different languages, unlike any
- #    other.
-
- # *** ditaa
-
- #     # #+begin_src ditaa :file blue.png :cmdline -r
- #     # +---------+
- #     # | cGRE    |
- #     # |         |
- #     # |    +----+
- #     # |    |cBLU|
- #     # |    |    |
- #     # +----+----+
- #     # #+end_src
-
- #     # #+RESULTS:
- #     # [[file:blue.png]]
-
- # *** Python
-
- #     #+BEGIN_SRC python :results output
- #     import random
- #     print("Hello Random Stuff: %f" % random.random())
- #     #+END_SRC
-
- #     #+RESULTS:
- #     : Hello Random Stuff: 0.969631
-
- # ** TODO Lists
- # *** Outlines starting with ~TODO~ become entries
- #     #+CAPTION: Outlines marked with TODO keywords
- #     #+NAME:    fig:org-mode-tasks.jpg
- #     #+attr_html: :width 75%
- #     [[./org-mode-tasks.jpg]]
-
- # *** View all TODOs in a central location
- #     #+CAPTION: Org-Agenda with items from multiple files
- #     #+NAME:    fig:org-mode-agenda.jpg
- #     #+attr_html: :width 57%
- #     [[./org-mode-agenda.jpg]]
- # *** Other Interesting Features
- #     * Prioritization
- #     * Tagging
- #     * More Visualizations
- # *** Customize it to your flow
- #     #+begin_src lisp
- #     (setq org-todo-keywords
- #        '((sequence "TODO" "DOING" "BLOCKED" "|" "DONE" "ARCHIVED")))
- #     (setq org-todo-keyword-faces
- #        '(("TODO" . "red")
- #          ("DOING" . "yellow")
- #          ("BLOCKED" . org-warning)
- #          ("DONE" . "green")
- #          ("ARCHIVED" .  "blue")))
- #     #+end_src
- # * Draft Notes
- # ** Compose [2/4]
- #    * [X] outlines
- #    * [X] todo lists
- #    * [ ] babel (code within org-mode, make sure we mention dot!)
- #      http://cachestocaches.com/2018/6/org-literate-programming/
- #    * [ ] Snippets (Emacs Specific?)
- # ** Render [0%]
- #    * [ ] The very presentation we're seeing
- #    * [ ] GitHub accepts it
- #    * [ ] [[https://github.com/yjwen/org-reveal][Org-Reveal]]
- #    * [ ] Blog system
- # ** Versions of org-mode outside Emacs
- #    * [ ] Pandoc
- #    * [ ] [[https://github.com/jceb/vim-orgmode][Vim]]
- #    * [ ] [[https://packagecontrol.io/packages/orgmode][Sublime]]
- #    * [ ] [[https://github.com/vscode-org-mode/vscode-org-mode][VS Code]]
- #    * [ ] Emacs without Emacs
- #      #+begin_src makefile
- #      EMACS    ?= $(shell which emacs)
- #      TARGET   := index.pdf
- #      pdf: $(TARGET)
- #      clean:; -rm $(TARGET) index.tex index.html *~
- #      %.pdf: %.org; $(EMACS) $< -Q --batch --eval '(org-latex-export-to-pdf)'
- #      .PHONY: pdf clean
- #      #+end_src
+*** Versions of org-mode outside Emacs
+    * [ ] Pandoc
+    * [ ] [[https://github.com/jceb/vim-orgmode][Vim]]
+    * [ ] [[https://packagecontrol.io/packages/orgmode][Sublime]]
+    * [ ] [[https://github.com/vscode-org-mode/vscode-org-mode][VS Code]]
+    * [ ] Emacs without Emacs
+      #+begin_src makefile
+      EMACS    ?= $(shell which emacs)
+      TARGET   := index.pdf
+      pdf: $(TARGET)
+      clean:; -rm $(TARGET) index.tex index.html *~
+      %.pdf: %.org; $(EMACS) $< -Q --batch --eval '(org-latex-export-to-pdf)'
+      .PHONY: pdf clean
+      #+end_src
+* Demo Time
+** How did we render this presentation
+** Org-Mode running wild in its natural habitat
+   * Outlines
+   * TODO Management
+   * Agenda Consolidation
+   * Dynamic Tables (Yeah, spreadsheets)
+   * Literate Programming (Like Jupyter)
