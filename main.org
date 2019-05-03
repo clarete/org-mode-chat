@@ -129,11 +129,11 @@
     #+end_src
 
 *** Versions of org-mode outside Emacs
-    * [ ] Pandoc
-    * [ ] [[https://github.com/jceb/vim-orgmode][Vim]]
-    * [ ] [[https://packagecontrol.io/packages/orgmode][Sublime]]
-    * [ ] [[https://github.com/vscode-org-mode/vscode-org-mode][VS Code]]
-    * [ ] Emacs without Emacs
+    * Pandoc
+    * [[https://github.com/jceb/vim-orgmode][Vim]]
+    * [[https://packagecontrol.io/packages/orgmode][Sublime]]
+    * [[https://github.com/vscode-org-mode/vscode-org-mode][VS Code]]
+    * Emacs without Emacs
       #+begin_src makefile
       EMACS    ?= $(shell which emacs)
       TARGET   := index.pdf
@@ -143,6 +143,7 @@
       .PHONY: pdf clean
       #+end_src
 * Demo Time
+** A look at the source of the Blog/PDF outputs
 ** How did we render this presentation
 ** Org-Mode running wild in its natural habitat
    * Outlines
